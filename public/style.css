@@ -1,0 +1,153 @@
+body{
+    background-color: rgb(190, 208, 243);
+  }
+
+  .bar{
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    background-color: rgb(249, 59, 59);
+    text-transform: capitalize;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-thickness: 1px;
+    margin: -10px 0px 0px -10px;
+    padding-left: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-bottom: solid black 2px;
+  }
+  h2{
+    text-transform: capitalize;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    align-self: center;
+    font-size: 5rem;
+    outline-style: dashed;
+    margin-top: 20px;
+  }
+  .pricing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100lvh;
+    margin-top: -200px;
+  }
+  .pricing-plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(225, 223, 223);
+    padding:40px 60px 50px;
+    max-width: 270px;
+    flex-grow: 0;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px;
+  }
+  .basic-plan{
+    background-color: rgb(139, 138, 138);
+  }
+  .standard-plan{
+    background-color: rgb(179, 176, 176);
+  }
+  .premium-plan{
+    background-color: rgb(229, 225, 225);
+  }
+  
+  .plan-title{
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px;
+  }
+  .basic{
+    background-color: rgb(138, 217, 60);
+  }
+  .standard{
+    background-color: rgb(58, 239, 239);
+  }
+  .premium{
+    background-color: rgb(192, 90, 244);
+  }
+
+  .plan-price{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+  .basic-price{
+    text-shadow: 1px 1px 20px rgb(200, 200, 196);
+  }
+  .standard-price{
+    text-shadow: 1px 1px 20px rgb(241, 245, 245)
+  }
+  .premium-price{
+    text-shadow: 1px 1px 20px rgb(152, 151, 153);
+  }
+
+  .plan-features{
+    list-style-type: none;
+    padding: 0;
+  }
+  .plan-features > p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    margin: 3px;
+  }
+
+  .plan-button{
+    background-color: rgb(217, 79, 29);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    max-height: 30px;
+    margin-top: 10px;
+  }
+
+@media (max-width: 1250px){
+  h2{
+    flex-direction: column;
+    font-size: 9.16vw;
+  }
+  .pricing-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -20px;
+    flex-shrink: 1;
+  }
+  .pricing-plan{
+    padding: 3vw 5vw 4vw;
+    max-width: 210px;
+    max-height: 250px;
+  }
+  .plan-title{
+    margin-bottom: 1vw;
+  }
+  
+  .plan-title, p, .plan-button{
+    font-size: 1.27vw !important;
+  }
+  .basic-price{
+    font-size: 3.5vw;
+  }
+  .standard-price, .premium-price{
+    font-size: 3.22vw;
+  }
+  .plan-features{
+    margin-bottom: 1vw;
+  }
+  .plan-button{
+    margin-top: 0px;
+  }
+}
