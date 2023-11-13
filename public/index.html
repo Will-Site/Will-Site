@@ -1,67 +1,222 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-  <meta charset="UTF-8"/>
-  <title>Mod Post</title>   
-</head>
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html{
-      background-color: black;
+
+    body{
+      background-color: rgb(190, 208, 243);
     }
-    .text{
-      font-family: 'Caveat', cursive;
-      font-family: 'Libre Baskerville', serif;
+
+    .bar{
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1{
+      background-color: rgb(249, 59, 59);
+      text-transform: capitalize;
+      font-size: 3rem;
+      text-decoration: underline;
+      text-decoration-style:double;
+      text-decoration-thickness: 1px;
+      margin: -10px 0px 0px -10px;
+      padding-left: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+      border-bottom: solid black 2px;
+    }
+
+    h2{
+      text-transform: capitalize;
+      background-color: rgb(0, 0, 0);
       color: white;
       text-align: center;
-      text-transform: uppercase;
+      padding: 20px;
+      border-radius: 20px;
+      align-self: center;
+      font-size: 5rem;
+      outline-style: dashed;
+      margin-top: 20px;
     }
-    div{
-      padding: 100px;
-      margin-top: auto;
+
+    .pricing-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      height: 100lvh;
+      margin-top: -200px;
     }
-    img{
-      width: 100%;
-      max-width: 550px;
-      height: 100%;
-      max-height: 410px;
-      border-style: solid;
-      border-width: 5px;
-      border-color: white;
-      display: block;
-      margin-left: auto;
-      margin-right:auto;
+    .pricing-plan{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(225, 223, 223);
+      flex: 1;
+      padding:40px 60px 70px;
+      max-width: 200px;
+      max-height: 200px;
+      flex-grow: 0;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 10px 10px 10px;
+    }
+    .plan-title{
+      margin-bottom: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px;
+    }
+    .basic-plan{
+      background-color: rgb(139, 138, 138);
+    }
+    .standard-plan{
+      background-color: rgb(179, 176, 176);
+    }
+    .premium-plan{
+      background-color: rgb(229, 225, 225);
+    }
+    .basic{
+      background-color: rgb(138, 217, 60);
+    }
+    .standard{
+      background-color: rgb(58, 239, 239);
+    }
+    .premium{
+      background-color: rgb(192, 90, 244);
+    }
+    .plan-price{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .basic-price{
+      text-shadow: 1px 1px 20px rgb(200, 200, 196);
+    }
+    .standard-price{
+      text-shadow: 1px 1px 20px rgb(241, 245, 245)
+    }
+
+    .premium-price{
+      text-shadow: 1px 1px 20px rgb(152, 151, 153);
+    }
+
+    .plan-features{
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .plan-features > p{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .plan-button{
+      background-color: rgb(217, 79, 29);
+      color: white;
+      border-radius: 5px;
+      border: none;
+      max-height: 30px;
+      max-width: 100px;
+      margin-top: 5px;
+    }
+
+  @media (max-width: 1000px){
+
+    .plan-title, p, .plan-button{
+      font-size: 1.27vw !important;
+    }
+    h2{
+      flex-direction: column;
+      font-size: 9.16vw;
+    }
+    
+    .pricing-container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: -20px;
+      flex-shrink: 1;
+    }
+    .basic-price{
+      background-color: rgb(66, 153, 153);
+    }
+    .pricing-plan{
+      padding: 3vw 5vw 4vw;
+      max-width: 210px;
+      max-height: 250px;
+    }
+    .standard-price, .premium-price{
+      font-size: 3.22vw;
+    }
+    .basic-price{
+      font-size: 3.5vw;
+    }
+    .plan-features{
+      margin-bottom: 1vw;
+    }
+    .plan-title{
+      margin-bottom: 1vw;
+    }
+    .plan-button{
+      margin-top: 0px;
+    }
+
+  }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      
     }
   </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <div>
-      <img src="./assets/images/IMG-6484.jpg" />
-      <h1 class="text">test</h1>
-      <p class="text" style="font-size: .7em;">day three of learning web dev... 9 nov 2023</p>
+<body>
+  <div class="bar">
+    <h1>xserve </h1>
+    <h2>cloud storage</h2>
+  </div>
+  <div class="pricing-container">
+    <div class="pricing-plan basic-plan">
+      <div class="plan-title basic">Basic</div>
+      <div class="plan-price basic-price">$9.99/month</div>
+      <div class="plan-features">
+        <p>✅ 10GB Storage</p>
+        <p>✅ 1 User</p>
+        <p>🚫 Support</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
     </div>
-  </body>
+    <div class="pricing-plan standard-plan">
+      <div class="plan-title standard">Standard</div>
+      <div class="plan-price standard-price">$19.99/month</div>
+      <div class="plan-features">
+        <p>✅ 50GB Storage</p>
+        <p>✅ 5 Users</p>
+        <p>✅ Phone & Email Support</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan premium-plan">
+      <div class="plan-title premium">Premium</div>
+      <div class="plan-price premium-price">$49.99/month</div>
+      <div class="plan-features">
+        <p>✅ 100GB Storage</p>
+        <p>✅ 10 Users</p>
+        <p>✅ 24/7 Support</p>
+      </div>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
 
 </html>
-
-
-
-<!-- 
-  TODO: Create a motivational post website.
-Style it how ever you like. 
-Look at the goal image for inspiration.
-But it must have the following features:
-1. The main h1 text should be using the Regular Libre Baskerville Font from Google Fonts:
-  https://fonts.google.com/specimen/Libre+Baskerville
-2. The text should be white and background black.
-3. Add your own image into the images folder inside assets. It should have a 5px white border.
-4. The text should be center aligned.
-5. Create a div to contain the h1, p and img elements. Adjust the margins so that the image and text are centered on the page. 
-  Hint: You horizontally center a div by giving it a width of 50% and a margin-left of 25%.
-  Hint: Set the image to have a width of 100% so it fills the div. 
-6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
-  https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
--->
